@@ -4,7 +4,8 @@
 	include 'head.php';
 	 $database=new DBUtils();
 	echo '<h3 align=center>message board</h3>';
-	if($msgs=$database->getAllMessages()===false){
+	$msgs=$database->getAllMessages();
+	if($msg===false){
 			echo '<br>Board is empty <br> Create new message';
 	}
 	else {
